@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/CSSRulePlugin.min.js"></script>
+</head>
+<body>
+    <div>Hello</div>
+
+    <div class="btn" id="toggle-btn">
+        <div class="btn-outline btn-outline-1"></div>
+        <div class="btn-outline btn-outline-2"></div>
+        <div id="hamburger">
+          <span></span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Overlay with CSS Animation -->
+    <div class="overlay">
+        <div class="overlay-shape"></div>
+      </div>
+  
+      <!-- Menu Structure -->
+      <div class="menu">
+        <!-- Close Button -->
+        <div class="btn close-btn" id="close-btn">
+          <div class="btn-outline btn-outline-1"></div>
+          <div class="btn-outline btn-outline-2"></div>
+          <div id="hamburger-close">
+            <span></span>
+          </div>
+        </div>
+  
+        <div class="primary-menu">
+            <div class="menu-container">
+              <div class="wrapper">
+                <div class="menu-item">
+                  <a href="ourwork.html"><span>I</span>OurWork</a>
+                  <div class="menu-item-revealer"></div>
+                </div>
+                <div class="menu-item">
+                  <a href="whytrees.html"><span>II</span>WhyTrees?</a>
+                  <div class="menu-item-revealer"></div>
+                </div>
+                <div class="menu-item">
+                  <a href="aboutus.html"><span>III</span>About Us</a>
+                  <div class="menu-item-revealer"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <div class="secondary-menu">
+            <div class="menu-container">
+              <div class="wrapper">
+                <div class="menu-item">
+                  <a href="resources.html">Resources</a>
+                  <div class="menu-item-revealer"></div>
+                </div>
+                <div class="menu-item">
+                  <a href="getinvolved.html">Get Involved</a>
+                  <div class="menu-item-revealer"></div>
+                </div>
+                
+              </div>
+              <div class="wrapper">
+                <div class="menu-item">
+                  <a href="index.html">Home</a>
+                  <div class="menu-item-revealer"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+     <!-- GSAP Animations -->
+    <script>
+         
+        // Menu Animation
+        const tl = gsap.timeline({ paused: true });
+        let overlayShape = document.querySelector(".overlay-shape");
+        let spanBefore = CSSRulePlugin.getRule("#hamburger span:before");
+        let spanBeforeClose = CSSRulePlugin.getRule(
+          "#hamburger-close span:before"
+        );
+  
+        // Initial Setup
+        gsap.set(spanBefore, { background: "#e5e3dc" });
+        gsap.set(spanBeforeClose, { background: "#e5e3dc" });
+        gsap.set(".menu", { visibility: "hidden" });
+        gsap.set(".title", { zIndex: 0 });
+  
+        // Reveal Menu Function
+        function revealMenu() {
+          revealMenuItems();
+  
+          const hamburger = document.getElementById("hamburger");
+          const hamburgerClose = document.getElementById("hamburger-close");
+          const toggleBtn = document.getElementById("toggle-btn");
+          const closeBtn = document.getElementById("close-btn");
+  
+          toggleBtn.onclick = function (e) {
+            hamburger.classList.toggle("active");
+            hamburgerClose.classList.toggle("active");
+            tl.reversed(!tl.reversed());
+          };
+  
+          closeBtn.onclick = function (e) {
+            hamburger.classList.remove("active");
+            hamburgerClose.classList.remove("active");
+            tl.reversed(!tl.reversed());
+          };
+        }
+  
+        revealMenu();
+  
+        // Reveal Menu Items Animation
+        function revealMenuItems() {
+          const power2 = "power2.inOut";
+          const power4 = "power4.inOut";
+  
+          // Hamburger Animation
+          tl.to("#hamburger", 1.25, {
+            marginTop: "-5px",
+            x: -40,
+            y: 40,
+            ease: power4,
+          });
+  
+          // Hamburger Line Color Change
+          tl.to(
+            "#hamburger span",
+            1,
+            { background: "#e2e2dc", ease: power2 },
+            "<"
+          );
+          tl.to(spanBefore, 1, { background: "#e2e2dc", ease: power2 }, "<");
+  
+          // Button Outline Animation
+          tl.to(
+            ".btn .btn-outline",
+            1.25,
+            {
+              x: -40,
+              y: 40,
+              width: "140px",
+              height: "140px",
+              border: "1px solid #e2e2dc",
+              ease: power4,
+            },
+            "<"
+          );
+  
+          // Overlay Shape Animation
+          tl.to(
+            overlayShape,
+            0.8,
+            {
+              clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+              ease: Power2.easeIn,
+            },
+            "<"
+          ).to(
+            overlayShape,
+            0.8,
+            {
+              clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+              ease: Power2.easeIn,
+            },
+            "-0.5"
+          );
+  
+          // Show Menu
+          tl.to(".menu", 1, { visibility: "visible" }, "-=0.5").to(
+            ".title",
+            0.5,
+            { zIndex: -1 },
+            "-=0.5"
+          );
+  
+          // Menu Items Animation
+          tl.to(
+            ".menu-item > a",
+            1,
+            {
+              top: 0,
+              ease: "power3.out",
+              stagger: { amount: 0.5 },
+            },
+            "-=1"
+          ).reverse();
+        }
+      </script> 
+</body>
+</html>
