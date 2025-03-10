@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evergreen Impact</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/CSSRulePlugin.min.js"></script>
+
+    <!-- Add the Moon Dance font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Monsieur+La+Doulaise&family=Moon+Dance&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Monsieur+La+Doulaise&family=Moon+Dance&family=Nixie+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="index-page">
+    <!-- Loader Animation -->
+    <div class="loader">
+      <div class="loader-clip clip-top">
+        <div class="marquee">
+          <div class="marquee-container">
+            <span>Evergreen</span>
+            <span>Evergreen</span>
+            <span>Evergreen</span>
+            <span>Evergreen</span>
+            <span>Evergreen</span>
+          </div>
+        </div>
+      </div>
+      <div class="loader-clip clip-bottom">
+        <div class="marquee">
+          <div class="marquee-container">
+            <span>Evergreen</span>
+            <span>Evergreen</span>
+            <span>Evergreen</span>
+            <span>Evergreen</span>
+            <span>Evergreen</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="nav">
+        <div class="logo">
+          <img
+            src="el.png"
+            alt="Evergreen Logo"
+            style="height: 40px; width: auto"
+          />
+          Evergreen
+        </div>
+
+        <!-- Morphing Button with Hamburger Icon -->
+        <div class="btn" id="toggle-btn">
+          <div class="btn-outline btn-outline-1"></div>
+          <div class="btn-outline btn-outline-2"></div>
+          <div id="hamburger">
+            <span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="title">
+        <span class="evergreen">Evergreen</span>
+        <span class="impact">Impact</span>
+      </div>
+
+      <div class="footer">
+        <p class="moon">
+          Impact2025<span
+            style="display: inline-block; font-size: 15px; color: #e5e3dc"
+            >©</span
+          >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="40px"
+            viewBox="0 -960 960 960"
+            width="40px"
+            fill="#48752C"
+          >
+            <path
+              d="M480-100q-79 0-148-30t-120.5-81.5Q160-263 130-332t-30-148q0-79 30-148t81.5-120.5Q263-800 332-830t148-30v-100l160 160-160 160v-100q-108 0-184 76t-76 184q0 66 30.5 122.5T332-266q16-28 47.5-47.5T452-338q-3-21-8-42t-12-39q-11 9-24 14t-28 5q-33 0-56.5-23.5T300-480v-40q0-17-5.5-32T280-580q50-1 89 9 34 9 62 29.5t29 61.5q0 9-1.5 16.5T453-448q-13-10-26-18t-27-14q17 13 39 40t41 64q20-49 50-96.5t70-87.5q-23 16-44 34t-41 38q-7-11-11-24.5t-4-27.5q0-42 29-71t71-29h40q23 0 38-6t25-14q11-9 17-20 4 67-7 120-9 45-34 82.5T600-440q-15 0-28.5-4T547-455q-7 19-16 50.5T517-337q38 7 67 26t44 45q51-35 81.5-91T740-480h120q0 79-30 148t-81.5 120.5Q697-160 628-130t-148 30Z"
+            />
+          </svg>
+        </p>
+        <button
+          class="donate-button"
+          onclick="window.location.href='donate.html'"
+        >
+          Donate Now
+        </button>
+      </div>
+    </div>
+
+    <!-- Overlay with CSS Animation -->
+    <div class="overlay">
+      <div class="overlay-shape"></div>
+    </div>
+
+    <!-- Menu Structure -->
+    <div class="menu">
+      <!-- Close Button -->
+      <div class="btn close-btn" id="close-btn">
+        <div class="btn-outline btn-outline-1"></div>
+        <div class="btn-outline btn-outline-2"></div>
+        <div id="hamburger-close">
+          <span></span>
+        </div>
+      </div>
+
+      <div class="primary-menu">
+        <div class="menu-container">
+          <div class="wrapper">
+            <div class="menu-item">
+              <a href="ourwork.html"><span>I</span>OurWork</a>
+              <div class="menu-item-revealer"></div>
+            </div>
+            <div class="menu-item">
+              <a href="whytrees.html"><span>II</span>WhyTrees?</a>
+              <div class="menu-item-revealer"></div>
+            </div>
+            <div class="menu-item">
+              <a href="aboutus.html"><span>III</span>About Us</a>
+              <div class="menu-item-revealer"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="secondary-menu">
+        <div class="menu-container">
+          <div class="wrapper">
+            <div class="menu-item">
+              <a href="resources.html">Resources</a>
+              <div class="menu-item-revealer"></div>
+            </div>
+            <div class="menu-item">
+              <a href="getinvolved.html">Get Involved</a>
+              <div class="menu-item-revealer"></div>
+            </div>
+          </div>
+          <div class="wrapper">
+            <div class="menu-item">
+              <a href="index.html">Home</a>
+              <div class="menu-item-revealer"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GSAP Animations -->
+    <script>
+      // Loader Animation
+      gsap.from(".clip-top, .clip-bottom", 2, {
+        delay: 1,
+        height: "50vh",
+        ease: "power4.inOut",
+      });
+
+      gsap.to(".marquee", 3.5, {
+        delay: 0.75,
+        top: "50%",
+        ease: "power4.inOut",
+      });
+
+      gsap.from(".clip-top .marquee, .clip-bottom .marquee", 5, {
+        delay: 1,
+        left: "100%",
+        ease: "power3.inOut",
+      });
+
+      gsap.from(".clip-center .marquee", 5, {
+        delay: 1,
+        left: "-50%",
+        ease: "power3.inOut",
+      });
+
+      gsap.to(".clip-top", 2, {
+        delay: 6,
+        clipPath: "inset(100% 0 0 0)",
+        ease: "power4.inOut",
+      });
+
+      gsap.to(".clip-bottom", 2, {
+        delay: 6,
+        clipPath: "inset(100% 0 0 0)",
+        ease: "power4.inOut",
+      });
+
+      gsap.to(
+        ".clip-top .marquee, .clip-bottom .marquee, .clip-center .marquee span",
+        1,
+        {
+          delay: 6,
+          opacity: 0,
+          ease: "power2.inOut",
+        }
+      );
+
+      // Menu Animation
+      const tl = gsap.timeline({ paused: true });
+      let overlayShape = document.querySelector(".overlay-shape");
+      let spanBefore = CSSRulePlugin.getRule("#hamburger span:before");
+      let spanBeforeClose = CSSRulePlugin.getRule(
+        "#hamburger-close span:before"
+      );
+
+      // Initial Setup
+      gsap.set(spanBefore, { background: "#e5e3dc" });
+      gsap.set(spanBeforeClose, { background: "#e5e3dc" });
+      gsap.set(".menu", { visibility: "hidden" });
+      gsap.set(".title", { zIndex: 0 });
+
+      // Reveal Menu Function
+      function revealMenu() {
+        revealMenuItems();
+
+        const hamburger = document.getElementById("hamburger");
+        const hamburgerClose = document.getElementById("hamburger-close");
+        const toggleBtn = document.getElementById("toggle-btn");
+        const closeBtn = document.getElementById("close-btn");
+
+        toggleBtn.onclick = function (e) {
+          hamburger.classList.toggle("active");
+          hamburgerClose.classList.toggle("active");
+          tl.reversed(!tl.reversed());
+        };
+
+        closeBtn.onclick = function (e) {
+          hamburger.classList.remove("active");
+          hamburgerClose.classList.remove("active");
+          tl.reversed(!tl.reversed());
+        };
+      }
+
+      revealMenu();
+
+      // Reveal Menu Items Animation
+      function revealMenuItems() {
+        const power2 = "power2.inOut";
+        const power4 = "power4.inOut";
+
+        // Hamburger Animation
+        tl.to("#hamburger", 1.25, {
+          marginTop: "-5px",
+          x: -40,
+          y: 40,
+          ease: power4,
+        });
+
+        // Hamburger Line Color Change
+        tl.to(
+          "#hamburger span",
+          1,
+          { background: "#e2e2dc", ease: power2 },
+          "<"
+        );
+        tl.to(spanBefore, 1, { background: "#e2e2dc", ease: power2 }, "<");
+
+        // Button Outline Animation
+        tl.to(
+          ".btn .btn-outline",
+          1.25,
+          {
+            x: -40,
+            y: 40,
+            width: "140px",
+            height: "140px",
+            border: "1px solid #e2e2dc",
+            ease: power4,
+          },
+          "<"
+        );
+
+        // Overlay Shape Animation
+        tl.to(
+          overlayShape,
+          0.8,
+          {
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+            ease: Power2.easeIn,
+          },
+          "<"
+        ).to(
+          overlayShape,
+          0.8,
+          {
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+            ease: Power2.easeIn,
+          },
+          "-0.5"
+        );
+
+        // Show Menu
+        tl.to(".menu", 1, { visibility: "visible" }, "-=0.5").to(
+          ".title",
+          0.5,
+          { zIndex: -1 },
+          "-=0.5"
+        );
+
+        // Menu Items Animation
+        tl.to(
+          ".menu-item > a",
+          1,
+          {
+            top: 0,
+            ease: "power3.out",
+            stagger: { amount: 0.5 },
+          },
+          "-=1"
+        ).reverse();
+      }
+    </script>
+  </body>
+</html>

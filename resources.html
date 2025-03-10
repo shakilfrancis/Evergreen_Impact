@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/CSSRulePlugin.min.js"></script>
+    <style>
+      @font-face {
+        font-family: myFont;
+        src: url(Quincento.otf);
+      }
+      @font-face {
+        font-family: myQ;
+        src: url(Quetine.ttf);
+      }
+      @font-face {
+        font-family: myK;
+        src: url(Kornelins.otf);
+      }
+      @font-face {
+        font-family: myC;
+        src: url(Callifornia\ Signature.ttf);
+      }
+      @font-face {
+        font-family: myH;
+        src: url(Dh\ Cario\ DEMO.otf);
+      }
+      @font-face {
+        font-family: myP;
+        src: url(TA-ModernTimes-CnExtraLight.otf);
+      }
+      @font-face {
+        font-family: myDream;
+        src: url(Dream\ House\ Demo.ttf);
+      }
+      @font-face {
+        font-family: myFac;
+        src: url(Fathony\ King\ demo.ttf);
+      }
+      @font-face {
+        font-family: myCac;
+        src: url(Casftego.otf);
+      }
+      @font-face {
+        font-family: myQac;
+        src: url(Qalderon.otf);
+      }
+      body.resources-page {
+        font-family: "Montserrat", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+        color: #333;
+        display: flex;
+      }
+      header {
+        font-family: myH;
+        font-size: 32px;
+        color: #103508;
+      }
+      button {
+        font-family: myFont;
+      }
+      h2 {
+        font-family: myK;
+        font-size: 4vw;
+        text-align: center;
+      }
+      p {
+        font-family: myP;
+        text-align: center;
+      }
+      li {
+        font-family: myP;
+        
+      }
+      .sidebar {
+        margin: 0;
+        padding: 0;
+        width: 250px;
+        height: 100vh;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        background-color: #ffffff;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 20px;
+        padding-top: 100px;
+      }
+
+      .sidebar-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1; /* Puts the video behind other elements */
+      }
+
+      .tab-button {
+        background: none;
+        border: none;
+        color: #faebc1;
+        padding: 15px;
+        text-align: left;
+        width: 100%;
+        font-size: 25px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      .tab-button:hover,
+      .tab-button.active {
+        background-color: #8b5e3b;
+        font-weight: 600;
+      }
+      .content {
+        margin-top: 150px;
+        margin-left: 270px;
+        padding: 20px;
+        flex-grow: 1;
+      }
+      .tab-pane {
+        display: none;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+      .tab-pane.active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body class="resources-page">
+    <div class="sidebar">
+      <!-- Background Video -->
+      <video class="sidebar-video" autoplay loop muted>
+        <source src="mtm.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <div class="logo">
+        <img
+          src="el.png"
+          alt="Evergreen Logo"
+          style="height: 40px; width: auto"
+        />
+      </div>
+
+      <header>
+        <h1>Resources</h1>
+      </header>
+
+      <button class="tab-button active" data-target="stories">Stories</button>
+      <button class="tab-button" data-target="faqs">FAQs</button>
+      <button class="tab-button" data-target="impact-report">
+        Impact Report
+      </button>
+      <button class="tab-button" data-target="careers">Careers</button>
+    </div>
+
+    <div class="content">
+      <div id="stories" class="tab-pane active">
+        <h2>Stories</h2>
+        <p>
+          🌱 The world is changing, and it is people like you who are making
+          that change possible. Every tree planted is a step toward a greener
+          future—a gift to generations yet to come.
+        </p>
+        <p>
+          🌍 From the heart of Africa, where reforestation is restoring hope to
+          farmers, to the bustling cities where students are planting trees in
+          their communities, these stories remind us that
+          <strong>small actions create monumental impact.</strong>
+        </p>
+        <p>
+          ✨ Imagine a young girl who once saw her village losing its trees, the
+          rivers drying up, and wildlife disappearing. Today, she leads an
+          environmental movement, inspiring thousands to take action.
+          <strong>She started with just one tree.</strong>
+        </p>
+        <p>
+          💚 This is what Evergreen Impact is all about—empowering individuals
+          and communities to leave a lasting imprint of love, responsibility,
+          and sustainability.
+          <strong>You, too, can be part of this movement.</strong>
+        </p>
+      </div>
+
+      <div id="faqs" class="tab-pane">
+        <h2>FAQs</h2>
+        <p>
+          <strong>🌱 How can I donate to Evergreen Impact?</strong><br />
+          Your generosity fuels our mission! You can donate directly through our
+          website by clicking the 'Donate' button.
+        </p>
+        <p>
+          <strong>🌍 Where are the trees planted?</strong><br />
+          We plant trees in deforested and climate-vulnerable areas worldwide,
+          ensuring the greatest environmental and social impact.
+        </p>
+        <p>
+          <strong>💡 How else can I support Evergreen Impact?</strong><br />
+          Beyond donations, you can spread the word! Share our mission,
+          volunteer, or start a local green initiative in your community. Every
+          voice matters!
+        </p>
+      </div>
+
+      <div id="impact-report" class="tab-pane">
+        <h2>Impact Report</h2>
+        <p>
+          🌿
+          <strong
+            >In 2024, we didn’t just plant trees—we planted hope, resilience,
+            and change.</strong
+          >
+        </p>
+        <p>
+           With your support, Evergreen Impact successfully planted over
+          <strong>1 million trees</strong> this year, leading to:
+        </p>
+        <p>🌍 Reduced carbon emissions</p>
+        <p>🌿 Revived biodiversity</p>
+        <p>💧 Restored watersheds</p>
+        <p>👩‍🌾 Empowered farmers</p>
+        <p>👶 A healthier planet for future generations</p>
+        <p>
+          🌎 <strong>This is only the beginning.</strong> The ripple effects of
+          our actions today will be felt for decades to come.
+        </p>
+      </div>
+
+      <div id="careers" class="tab-pane">
+        <h2>Careers</h2>
+        <p>
+          
+          <strong
+            >Are you passionate about making a real difference in the
+            world?</strong
+          >
+        </p>
+        <p>
+          🌱 At Evergreen Impact, we don’t just plant trees—we cultivate
+          <strong>change, empowerment, and innovation.</strong>
+        </p>
+        <p> Why join us?</p>
+        <p>🌍 Work with a team of inspiring changemakers</p>
+        <p>🌿 Be part of a mission that truly matters</p>
+        <p>💡 See the direct impact of your efforts in restoring nature</p>
+        <p>
+          ✨ Whether you’re a scientist, marketer, software developer, or
+          community leader,
+          <strong>your skills can help transform landscapes and lives.</strong>
+        </p>
+        <p>
+          🌳 <strong>Let’s grow the future together.</strong> Apply today and be
+          part of something truly extraordinary.
+        </p>
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll(".tab-button").forEach((button) => {
+        button.addEventListener("click", function () {
+          document
+            .querySelectorAll(".tab-button")
+            .forEach((btn) => btn.classList.remove("active"));
+          document
+            .querySelectorAll(".tab-pane")
+            .forEach((pane) => pane.classList.remove("active"));
+
+          this.classList.add("active");
+          document.getElementById(this.dataset.target).classList.add("active");
+        });
+      });
+    </script>
+
+    <div class="btn" id="toggle-btn">
+        <div class="btn-outline btn-outline-1"></div>
+        <div class="btn-outline btn-outline-2"></div>
+        <div id="hamburger">
+          <span></span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Overlay with CSS Animation -->
+    <div class="overlay">
+        <div class="overlay-shape"></div>
+      </div>
+  
+      <!-- Menu Structure -->
+      <div class="menu">
+        <!-- Close Button -->
+        <div class="btn close-btn" id="close-btn">
+          <div class="btn-outline btn-outline-1"></div>
+          <div class="btn-outline btn-outline-2"></div>
+          <div id="hamburger-close">
+            <span></span>
+          </div>
+        </div>
+  
+        <div class="primary-menu">
+            <div class="menu-container">
+              <div class="wrapper">
+                <div class="menu-item">
+                  <a href="ourwork.html"><span>I</span>OurWork</a>
+                  <div class="menu-item-revealer"></div>
+                </div>
+                <div class="menu-item">
+                  <a href="whytrees.html"><span>II</span>WhyTrees?</a>
+                  <div class="menu-item-revealer"></div>
+                </div>
+                <div class="menu-item">
+                  <a href="aboutus.html"><span>III</span>About Us</a>
+                  <div class="menu-item-revealer"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <div class="secondary-menu">
+            <div class="menu-container">
+              <div class="wrapper">
+                <div class="menu-item">
+                  <a href="resources.html">Resources</a>
+                  <div class="menu-item-revealer"></div>
+                </div>
+                <div class="menu-item">
+                  <a href="getinvolved.html">Get Involved</a>
+                  <div class="menu-item-revealer"></div>
+                </div>
+                
+              </div>
+              <div class="wrapper">
+                <div class="menu-item">
+                  <a href="index.html">Home</a>
+                  <div class="menu-item-revealer"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+     <!-- GSAP Animations -->
+    <script>
+         
+        // Menu Animation
+        const tl = gsap.timeline({ paused: true });
+        let overlayShape = document.querySelector(".overlay-shape");
+        let spanBefore = CSSRulePlugin.getRule("#hamburger span:before");
+        let spanBeforeClose = CSSRulePlugin.getRule(
+          "#hamburger-close span:before"
+        );
+  
+        // Initial Setup
+        gsap.set(spanBefore, { background: "#e5e3dc" });
+        gsap.set(spanBeforeClose, { background: "#e5e3dc" });
+        gsap.set(".menu", { visibility: "hidden" });
+        gsap.set(".title", { zIndex: 0 });
+  
+        // Reveal Menu Function
+        function revealMenu() {
+          revealMenuItems();
+  
+          const hamburger = document.getElementById("hamburger");
+          const hamburgerClose = document.getElementById("hamburger-close");
+          const toggleBtn = document.getElementById("toggle-btn");
+          const closeBtn = document.getElementById("close-btn");
+  
+          toggleBtn.onclick = function (e) {
+            hamburger.classList.toggle("active");
+            hamburgerClose.classList.toggle("active");
+            tl.reversed(!tl.reversed());
+          };
+  
+          closeBtn.onclick = function (e) {
+            hamburger.classList.remove("active");
+            hamburgerClose.classList.remove("active");
+            tl.reversed(!tl.reversed());
+          };
+        }
+  
+        revealMenu();
+  
+        // Reveal Menu Items Animation
+        function revealMenuItems() {
+          const power2 = "power2.inOut";
+          const power4 = "power4.inOut";
+  
+          // Hamburger Animation
+          tl.to("#hamburger", 1.25, {
+            marginTop: "-5px",
+            x: -40,
+            y: 40,
+            ease: power4,
+          });
+  
+          // Hamburger Line Color Change
+          tl.to(
+            "#hamburger span",
+            1,
+            { background: "#e2e2dc", ease: power2 },
+            "<"
+          );
+          tl.to(spanBefore, 1, { background: "#e2e2dc", ease: power2 }, "<");
+  
+          // Button Outline Animation
+          tl.to(
+            ".btn .btn-outline",
+            1.25,
+            {
+              x: -40,
+              y: 40,
+              width: "140px",
+              height: "140px",
+              border: "1px solid #e2e2dc",
+              ease: power4,
+            },
+            "<"
+          );
+  
+          // Overlay Shape Animation
+          tl.to(
+            overlayShape,
+            0.8,
+            {
+              clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+              ease: Power2.easeIn,
+            },
+            "<"
+          ).to(
+            overlayShape,
+            0.8,
+            {
+              clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+              ease: Power2.easeIn,
+            },
+            "-0.5"
+          );
+  
+          // Show Menu
+          tl.to(".menu", 1, { visibility: "visible" }, "-=0.5").to(
+            ".title",
+            0.5,
+            { zIndex: -1 },
+            "-=0.5"
+          );
+  
+          // Menu Items Animation
+          tl.to(
+            ".menu-item > a",
+            1,
+            {
+              top: 0,
+              ease: "power3.out",
+              stagger: { amount: 0.5 },
+            },
+            "-=1"
+          ).reverse();
+        }
+      </script> 
+</body>
+</html>

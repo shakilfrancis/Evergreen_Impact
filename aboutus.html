@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AboutUs</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/CSSRulePlugin.min.js"></script>
+    <style>
+      
+@font-face {
+        font-family: myFont;
+        src: url(Quincento.otf);
+      }
+      @font-face {
+        font-family: myQ;
+        src: url(Quetine.ttf);
+      }
+      @font-face {
+        font-family: myK;
+        src: url(Kornelins.otf);
+      }
+      @font-face {
+        font-family: myC;
+        src: url(Callifornia\ Signature.ttf);
+      }
+      @font-face {
+        font-family: myH;
+        src: url(Dh\ Cario\ DEMO.otf);
+      }
+      @font-face {
+        font-family: myP;
+        src: url(TA-ModernTimes-CnExtraLight.otf);
+      }
+      @font-face {
+        font-family: myDream;
+        src: url(Dream\ House\ Demo.ttf);
+      }
+      @font-face {
+        font-family: myFac;
+        src: url(Fathony\ King\ demo.ttf);
+      }
+      @font-face {
+        font-family: myCac;
+        src: url(Casftego.otf);
+      }
+      @font-face {
+        font-family: myQac;
+        src: url(Qalderon.otf);
+      }
+      body.about-page {
+            font-family: myP, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .containery {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding: 50px 0;
+        }
+        h1 {
+            font-family: myCac, serif;
+            font-size: 3rem;
+            color: #2c5f2d;
+            margin-bottom: 20px;
+        }
+        h2 {
+          color: #8B5E3B;
+            font-family: myFont;
+            font-size: 35px;
+        }
+        p {
+          text-transform: lowercase;
+          font-family: myP, sans-serif;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #555;
+        }
+    </style>
+</head>
+<body class="about-page">
+  <div class="containery">
+    <h1>About Us</h1>
+    <p>Welcome to <strong>Evergreen Impact</strong>, where we believe in growing more for the future. Our mission is simple yet powerful: to plant trees and restore nature through community-driven donations. By supporting us, you are directly contributing to a greener planet and a sustainable tomorrow.</p>
+    <h2>Our Mission</h2>
+    <p>We aim to combat deforestation, improve biodiversity, and create a healthier environment by making tree-planting accessible to everyone. Every donation brings us one step closer to a greener Earth.</p>
+    <h2>Why Trees Matter</h2>
+    <p>Trees are vital for a balanced ecosystem. They absorb carbon dioxide, provide oxygen, conserve water, and support countless wildlife species. By planting trees, we contribute to climate action, cleaner air, and a better quality of life for future generations.</p>
+    <h2>Join Us</h2>
+    <p>Be a part of our movement. Whether by donating, volunteering, or spreading awareness, you can make a difference. Let’s grow more for the future—together.</p>
+
+    <div class="logo">
+      <img
+        src="el.png"
+        alt="Evergreen Logo"
+        style="height: 40px; width: auto"
+      />
+    </div>
+</div>
+
+    <div class="btn" id="toggle-btn">
+        <div class="btn-outline btn-outline-1"></div>
+        <div class="btn-outline btn-outline-2"></div>
+        <div id="hamburger">
+          <span></span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Overlay with CSS Animation -->
+    <div class="overlay">
+        <div class="overlay-shape"></div>
+      </div>
+  
+      <!-- Menu Structure -->
+      <div class="menu">
+        <!-- Close Button -->
+        <div class="btn close-btn" id="close-btn">
+          <div class="btn-outline btn-outline-1"></div>
+          <div class="btn-outline btn-outline-2"></div>
+          <div id="hamburger-close">
+            <span></span>
+          </div>
+        </div>
+  
+        <div class="primary-menu">
+            <div class="menu-container">
+              <div class="wrapper">
+                <div class="menu-item">
+                  <a href="ourwork.html"><span>I</span>OurWork</a>
+                  <div class="menu-item-revealer"></div>
+                </div>
+                <div class="menu-item">
+                  <a href="whytrees.html"><span>II</span>WhyTrees?</a>
+                  <div class="menu-item-revealer"></div>
+                </div>
+                <div class="menu-item">
+                  <a href="aboutus.html"><span>III</span>About Us</a>
+                  <div class="menu-item-revealer"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <div class="secondary-menu">
+            <div class="menu-container">
+              <div class="wrapper">
+                <div class="menu-item">
+                  <a href="resources.html">Resources</a>
+                  <div class="menu-item-revealer"></div>
+                </div>
+                <div class="menu-item">
+                  <a href="getinvolved.html">Get Involved</a>
+                  <div class="menu-item-revealer"></div>
+                </div>
+                
+              </div>
+              <div class="wrapper">
+                <div class="menu-item">
+                  <a href="index.html">Home</a>
+                  <div class="menu-item-revealer"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+     <!-- GSAP Animations -->
+    <script>
+         
+        // Menu Animation
+        const tl = gsap.timeline({ paused: true });
+        let overlayShape = document.querySelector(".overlay-shape");
+        let spanBefore = CSSRulePlugin.getRule("#hamburger span:before");
+        let spanBeforeClose = CSSRulePlugin.getRule(
+          "#hamburger-close span:before"
+        );
+  
+        // Initial Setup
+        gsap.set(spanBefore, { background: "#e5e3dc" });
+        gsap.set(spanBeforeClose, { background: "#e5e3dc" });
+        gsap.set(".menu", { visibility: "hidden" });
+        gsap.set(".title", { zIndex: 0 });
+  
+        // Reveal Menu Function
+        function revealMenu() {
+          revealMenuItems();
+  
+          const hamburger = document.getElementById("hamburger");
+          const hamburgerClose = document.getElementById("hamburger-close");
+          const toggleBtn = document.getElementById("toggle-btn");
+          const closeBtn = document.getElementById("close-btn");
+  
+          toggleBtn.onclick = function (e) {
+            hamburger.classList.toggle("active");
+            hamburgerClose.classList.toggle("active");
+            tl.reversed(!tl.reversed());
+          };
+  
+          closeBtn.onclick = function (e) {
+            hamburger.classList.remove("active");
+            hamburgerClose.classList.remove("active");
+            tl.reversed(!tl.reversed());
+          };
+        }
+  
+        revealMenu();
+  
+        // Reveal Menu Items Animation
+        function revealMenuItems() {
+          const power2 = "power2.inOut";
+          const power4 = "power4.inOut";
+  
+          // Hamburger Animation
+          tl.to("#hamburger", 1.25, {
+            marginTop: "-5px",
+            x: -40,
+            y: 40,
+            ease: power4,
+          });
+  
+          // Hamburger Line Color Change
+          tl.to(
+            "#hamburger span",
+            1,
+            { background: "#e2e2dc", ease: power2 },
+            "<"
+          );
+          tl.to(spanBefore, 1, { background: "#e2e2dc", ease: power2 }, "<");
+  
+          // Button Outline Animation
+          tl.to(
+            ".btn .btn-outline",
+            1.25,
+            {
+              x: -40,
+              y: 40,
+              width: "140px",
+              height: "140px",
+              border: "1px solid #e2e2dc",
+              ease: power4,
+            },
+            "<"
+          );
+  
+          // Overlay Shape Animation
+          tl.to(
+            overlayShape,
+            0.8,
+            {
+              clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+              ease: Power2.easeIn,
+            },
+            "<"
+          ).to(
+            overlayShape,
+            0.8,
+            {
+              clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+              ease: Power2.easeIn,
+            },
+            "-0.5"
+          );
+  
+          // Show Menu
+          tl.to(".menu", 1, { visibility: "visible" }, "-=0.5").to(
+            ".title",
+            0.5,
+            { zIndex: -1 },
+            "-=0.5"
+          );
+  
+          // Menu Items Animation
+          tl.to(
+            ".menu-item > a",
+            1,
+            {
+              top: 0,
+              ease: "power3.out",
+              stagger: { amount: 0.5 },
+            },
+            "-=1"
+          ).reverse();
+        }
+      </script> 
+</body>
+</html>

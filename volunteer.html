@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer</title>
+    <style>
+        @font-face {
+              font-family: myFont;
+              src: url(Quincento.otf);
+            }
+            @font-face {
+              font-family: myQ;
+              src: url(Quetine.ttf);
+            }
+            @font-face {
+              font-family: myK;
+              src: url(Kornelins.otf);
+            }
+            @font-face {
+              font-family: myC;
+              src: url(Callifornia\ Signature.ttf);
+            }
+            @font-face {
+              font-family: myH;
+              src: url(Dh\ Cario\ DEMO.otf);
+            }
+            @font-face {
+              font-family: myP;
+              src: url(TA-ModernTimes-CnExtraLight.otf);
+            }
+            @font-face {
+              font-family: myDream;
+              src: url(Dream\ House\ Demo.ttf);
+            }
+            @font-face {
+              font-family: myFac;
+              src: url(Fathony\ King\ demo.ttf);
+            }
+            @font-face {
+              font-family: myCac;
+              src: url(Casftego.otf);
+            }
+            @font-face {
+              font-family: myQac;
+              src: url(Qalderon.otf);
+            }
+        body.volunteer-page {
+            font-family: myP, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .containery {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            text-align: center;
+            font-family: myFont, serif;
+        color: #2c5f2d;
+            font-size: 2rem;
+        }
+        input, button {
+            font-family: myP, sans-serif;
+            margin-top: 1rem;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            font-family: myP, sans-serif;
+            background: #333;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #555;
+        }
+        .cta-button {
+            text-align: center;
+        font-family: myP, sans-serif;
+          
+          color: white;
+          background-color: #8B5E3B;
+          border-radius: 5px;
+          transition: 0.3s;
+      }
+      .cta-button:hover {
+          background-color: #555;
+      }
+      button, .cta-button {
+    display: block; /* Ensures they appear on separate lines */
+    margin: 1rem auto; /* Adds spacing and centers them */
+    width: 80%; /* Adjusts width for better alignment */
+}
+    </style>
+</head>
+<body class="volunteer-page">
+    <div class="containery">
+        <h1>Join Us as a Volunteer</h1>
+        <p>Sign up to contribute and make a difference!</p>
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <button onclick="sendEmail()">Sign Up</button>
+        <a href="getinvolved.html" class="cta-button">Back</a>
+    </div>
+
+    <script>
+        function sendEmail() {
+            let email = document.getElementById("email").value;
+            if (!email) {
+                alert("Please enter a valid email");
+                return;
+            }
+            
+            let orgEmail = "evergreenimpact@gmail.com";
+            let subject = "New Volunteer Sign-Up";
+            let body = `A new volunteer has signed up: ${email}`;
+            window.location.href = `mailto:${orgEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
+            setTimeout(() => {
+                alert("Your email has been sent. You will receive a confirmation soon. Evergreen");
+            }, 500);
+        }
+    </script>
+</body>
+</html>
+

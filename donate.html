@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donate | Support Our Cause</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      @font-face {
+        font-family: myFont;
+        src: url(Quincento.otf);
+      }
+      @font-face {
+        font-family: myQ;
+        src: url(Quetine.ttf);
+      }
+      @font-face {
+        font-family: myK;
+        src: url(Kornelins.otf);
+      }
+      @font-face {
+        font-family: myC;
+        src: url(Callifornia\ Signature.ttf);
+      }
+      @font-face {
+        font-family: myH;
+        src: url(Dh\ Cario\ DEMO.otf);
+      }
+      @font-face {
+        font-family: myP;
+        src: url(TA-ModernTimes-CnExtraLight.otf);
+      }
+      @font-face {
+        font-family: myDream;
+        src: url(Dream\ House\ Demo.ttf);
+      }
+      @font-face {
+        font-family: myFac;
+        src: url(Fathony\ King\ demo.ttf);
+      }
+      @font-face {
+        font-family: myCac;
+        src: url(Casftego.otf);
+      }
+      @font-face {
+        font-family: myQac;
+        src: url(Qalderon.otf);
+      }
+      body.donate-page {
+        
+        background: url(donate.JPG);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: #fff;
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+      header {
+        padding: 50px 20px;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
+      }
+      h1 {
+        color: #000000;
+        font-family: myH;
+        font-size: 2.5em;
+        font-weight: bold;
+      }
+      p {
+        font-family: myQac;
+        font-size: 1.2em;
+        opacity: 0.8;
+      }
+      .donate-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 60vh;
+      }
+      .donate-btn {
+        font-family: myQac;
+        background: #333;
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        font-size: 1.2em;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease-in-out;
+      }
+      .donate-btn:hover {
+        font-family: myQac;
+        background: #134609;
+      }
+      .donation-form {
+        font-family: myQac;
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #222;
+        padding: 20px;
+        border-radius: 10px;
+        width: 300px;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+      }
+      .form-group {
+        margin-bottom: 15px;
+        text-align: left;
+      }
+      .form-group label {
+        display: block;
+        font-size: 1em;
+      }
+      .form-group input,
+      .form-group select {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: none;
+        border-radius: 5px;
+      }
+      .form-actions {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px; /* Adds spacing between buttons */
+      }
+      .submit-btn,
+      .close-btn {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        flex: 1; /* Ensures both buttons take equal space */
+      }
+      .submit-btn {
+        font-family: myQac;
+        background: #28a745;
+        color: white;
+      }
+      .cta-button {
+        text-align: center;
+        font-family: myQac;
+        color: white;
+        background: #8b5e3b;
+        border-radius: 5px;
+        transition: 0.3s;
+        text-decoration: none; /* Removes underline from link */
+        padding: 15px 30px; /* Matches button padding */
+        font-size: 1.2em;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      .cta-button:hover {
+        background-color: #555;
+      }
+      button,
+      .cta-button {
+        display: block; /* Ensures they appear on separate lines */
+        margin: 1rem auto; /* Adds spacing and centers them */
+        width: 80%; /* Adjusts width for better alignment */
+      }
+    </style>
+  </head>
+  <body class="donate-page">
+    <header>
+      <div class="logo">
+        <img
+          src="el.png"
+          alt="Evergreen Logo"
+          style="height: 40px; width: auto"
+        />
+      </div>
+      <h1>Support Our Mission</h1>
+      <p>
+        Every contribution helps us create a better future. Join us in making a
+        difference.
+      </p>
+    </header>
+
+    <section class="donate-section">
+      <button class="donate-btn" id="donate-btn">Donate Now</button>
+      <a href="getinvolved.html" class="cta-button">Back</a>
+    </section>
+
+    <div class="donation-form" id="donation-form">
+      <h2>Make a Donation</h2>
+      <form id="donationForm">
+        <div class="form-group">
+          <label for="full-name">Full Name</label>
+          <input type="text" id="full-name" name="full-name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="amount">Donation Amount</label>
+          <input type="number" id="amount" name="amount" required />
+        </div>
+        <div class="form-group">
+          <label for="payment-method">Payment Method</label>
+          <select id="payment-method" name="payment-method" required>
+            <option value="credit-card">Credit Card</option>
+            <option value="paypal">PayPal</option>
+            <option value="bank-transfer">Bank Transfer</option>
+          </select>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="submit-btn">Donate</button>
+          <a href="#" class="cta-button" id="close-btn">Back</a>
+        </div>
+      </form>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Evergreen Impact. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+      document
+        .getElementById("donate-btn")
+        .addEventListener("click", function () {
+          document.getElementById("donation-form").style.display = "block";
+        });
+
+      document
+        .getElementById("close-btn")
+        .addEventListener("click", function () {
+          document.getElementById("donation-form").style.display = "none";
+        });
+
+      document
+        .getElementById("donationForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          alert("Thank you for your donation!");
+          document.getElementById("donation-form").style.display = "none";
+        });
+    </script>
+  </body>
+</html>
